@@ -1,0 +1,81 @@
+Founder of HTML/www : Tim Berners Lee
+
+SEO - Search Engine Optimization
+
+Search engine optimization (SEO) is the process of improving the ranking (visibility) of a website in search engines. The higher (or more frequently) a web site is displayed in a search engine list (like Google), the more visitors it is expected to receive.
+
+SEO considers how search engines work, what people search for, and which search terms (words) are typed. Optimizing a website may involve editing the content to increase its relevance to specific keywords. Promoting a site to increase the number of links, is another SEO tactic.
+
+Effective search engine optimization may require changes to the HTML source code of a site and to the site content. SEO tactics should be incorporated into the website development and especially into the menus and navigation structure.
+
+Another class of techniques, known as black hat SEO or spamdexing, uses methods such as link farms, keyword stuffing and article spinning that degrade both the relevance of search results and the quality of user-experience with search engines. Search engines look for sites that employ these techniques in order to remove them from their indices.
+
+
+
+HTML5:
+
+ <header>
+ element specifies a header for a document or section.Element should be used as a container for introductory content.You can have several <header> elements in one document.
+
+ <footer> - Same as Header
+
+<article> 
+element specifies independent, self-contained content.An article should make sense on its own, and it should be possible to read it independently from the rest of the web site.
+
+<section> 
+element defines a section in a document.According to W3C's HTML5 documentation: "A section is a thematic grouping of content, typically with a heading".A Web site's home page could be split into sections for introduction, content, and contact information.
+
+
+<nav>
+element defines a set of navigation links.It is intended for large blocks of navigation links. However, not all links in a document should be inside a <nav> element!
+
+<aside> 
+element defines some content aside from the content it is placed in (like a sidebar).The aside content should be related to the surrounding content.
+
+
+Meta tags :
+In HTML4 : <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+In HTML5 : <meta charset="utf-8">
+character_set :Specifies the character encoding for the HTML document.
+				UTF-8 - Character encoding for Unicode
+				ISO-8859-1 - Character encoding for the Latin alphabet
+
+In theory, any character encoding can be used, but no browser understands all of them. The more widely a character encoding is used, the better the chance that a browser will understand it.
+
+
+
+<section>,<article> and <div> :
+The Difference Between <article> <section> and <div>
+There is a confusing (lack of) difference in the HTML5 standard, between <article> <section> and <div>.
+In the HTML5 standard, the <section> element is defined as a block of related elements.
+The <article> element is defined as a complete, self-contained block of related elements.
+The <div> element is defined as a block of children elements.
+
+
+<img> - Has to use alt or title but alt supports all the browser but title only supports latest browser except IE old browsers.
+
+
+Basic Semantics Points :
+1. Use Correct Document Type --  
+   <!DOCTYPE html> | <!doctype html>
+
+2. Use Lower Case Element Names --
+Bad:		<SECTION> 
+			  <p>This is a paragraph.</p>
+			</SECTION>
+	---------------
+Very Bad:	<Section> 
+				<p>This is a paragraph.</p>
+			</SECTION>
+	---------------
+Good:		<section> 
+			  <p>This is a paragraph.</p>
+			</section>
+	---------------
+
+3.Close All HTML Elements
+	<nav> 
+		<ul>
+			<li></li>
+		</ul>
+	</nav>
