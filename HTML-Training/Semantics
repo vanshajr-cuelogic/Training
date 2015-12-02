@@ -52,10 +52,10 @@ The <article> element is defined as a complete, self-contained block of related 
 The <div> element is defined as a block of children elements.
 
 
-<img> - Has to use alt or title but alt supports all the browser but title only supports latest browser except IE old browsers.
+/********************************************************/
 
+Basic HTML5 Semantics Points :
 
-Basic Semantics Points :
 1. Use Correct Document Type --  
    <!DOCTYPE html> | <!doctype html>
 
@@ -79,3 +79,146 @@ Good:		<section>
 			<li></li>
 		</ul>
 	</nav>
+
+4.Close Empty HTML Elements :
+	In HTML5, it is optional to close empty elements.
+	<meta charset="utf-8">
+	or
+	<meta charset="utf-8"/>
+	Both are allowed.
+
+	Note - The slash (/) is required in XHTML and XML.
+
+5.Use Lower Case Attribute Names :
+	
+	HTML5 allows mixing uppercase and lowercase letters in attribute names.
+
+	Standard recommend using lowercase attribute names:
+		- Mixing uppercase and lowercase names is bad - "<div CLASS=""></div>"
+		- Developers are used to using lowercase names - "<div class=""></div>"
+		- Lowercase look cleaner	
+		- Lowercase are easier to write
+
+6.Quote Attribute Values :
+	It is recommend to quoting attribute values:
+
+		- You have to use quotes if the value contains spaces
+		- Mixing styles is never good
+		- Quoted values are easier to read
+
+	Bad Practice : <table class=table striped>
+	Good Practice : <table class="table striped">
+
+7.Image Attributes :
+	Tag : <img alt="Bingo" title="Bingo Logo" src="images/dice.png">
+
+	Why to use 'ALT' ?
+	- The required alt attribute specifies an alternate text for an image, if the image cannot be displayed. The alt attribute provides alternative information for an image if a user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).
+	-Always use the alt attribute with images. It is important when the image cannot be viewed.
+
+	Why to use 'TITLE' ?
+	- The title attribute specifies extra information about an element.The information is most often shown as a tooltip text when the mouse moves over the element.
+
+	Always define image size. It reduces flickering because the browser can reserve space for images before they are loaded.
+	- <img alt="Bingo" title="Bingo Logo" src="images/dice.png" style="width:128px;height:128px">
+
+
+8. Spaces and Equal Signs :
+	
+	Spaces around equal signs is legal:  
+			<link rel = "stylesheet" href = "styles.css">
+
+	But space-less is easier to read, and groups entities better together:
+			<link rel="stylesheet" href="styles.css">
+
+9.Avoid Long Code Lines :
+	- When using an HTML editor, it is inconvenient to scroll right and left to read the HTML code.Try to avoid code lines longer than 80 characters.
+
+10.Blank Lines and Indentation :
+   	- Do not add blank lines without a reason.
+		- For readability, add blank lines to separate large or logical code blocks.
+		- For readability, add 2 spaces of indentation. Do not use TAB.
+		- Do not use unnecessary blank lines and indentation. It is not necessary to use blank lines between short and related items. It is not necessary to indent every element:
+
+	Example :
+		With unnecessary indentation :
+			<p>
+			Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+			and the most populous metropolitan area in the world.
+			It is the seat of the Japanese government and the Imperial Palace,
+			and the home of the Japanese Imperial Family.
+			</p>
+
+		With proper indentation :
+			<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+			and the most populous metropolitan area in the world.
+			It is the seat of the Japanese government and the Imperial Palace,
+			and the home of the Japanese Imperial Family.</p>
+
+
+11. Omitting Tags :
+
+	a. Omitting <html> and <body>?
+		- In the HTML5 standard, the <html> tag and the <body> tag can be omitted.
+
+		<!DOCTYPE html>
+		<head>
+		  <title>Page Title</title>
+		</head>
+		.
+		.
+		.
+
+		BUT, standard not recommend omitting the <html> and <body> tags,because <html> element is the document root. It is the recommended place for specifying the page language
+		
+		<!DOCTYPE html>
+		<html lang="en-US">
+		.
+		.
+
+		Reason !!  Why standard not recommend omitting ?
+
+		- Declaring a language is important for accessibility applications (screen readers) and search engines.
+		- Omitting <html> or <body> can crash DOM and XML software.
+		- Omitting <body> can produce errors in older browsers (IE9).
+
+
+	b. Omitting <head>?
+		-  the <head> tag can also be omitted.By default, browsers will add all elements before <body>, to a default <head> element.
+
+
+		NOTE : OMITTING TAGS IS UNFAMILIAR TO WEB DEVELOPERS. IT NEEDS TIME TO BE ESTABLISH AS A GUIDELINE.
+	       
+	       - Version supports omitting of the tags but as per the W3 Standard will have to keep the tags as per heirarchy.
+
+12. Meta Data :
+	- Title :
+	    The <title> element is required in HTML5. Make the title as meaningful as possible:
+	    <title>HTML5 Syntax and Coding Style</title>
+
+	- Encoding : 
+		To ensure proper interpretation, and correct search engine indexing, both the language and the character encoding should be defined as early as possible in a document:
+
+	<!DOCTYPE html>
+	<html lang="en-US">
+	<head>
+	  <meta charset="UTF-8">
+	</head>
+	.
+	.
+	.
+	
+13. HTML Comments
+	-  
+
+
+/*******************************/
+
+Set Font Size With 'em'
+To allow users to resize the text (in the browser menu), many developers use em instead of pixels.
+
+The em size unit is recommended by the W3C.
+
+1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px.
+
+The size can be calculated from pixels to em using this formula: pixels/16=em
