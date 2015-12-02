@@ -208,8 +208,19 @@ Good:		<section>
 	.
 	.
 	
-13. HTML Comments
-	-  
+13. HTML Comment :
+	HTML :
+	-  <!-- Comment -->
+
+	CSS : 
+	- /* Comment */
+
+	JS :
+	- Multi line comment :
+		/*  Comment   */
+
+	-Single Line comment :
+	   //  Comment
 
 
 /*******************************/
