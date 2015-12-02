@@ -3,17 +3,171 @@
 	<head>
 		<title>Login</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="css/master.css"/>
+	<!-- 	<link rel="stylesheet" href="css/master.css"/> -->
+		<style>
+			/*Bingo Reset */
+			@font-face {
+			    font-family: 'calibriRegular';
+			    src: url('../fonts/calibri.ttf') format('truetype');
+				font-style:normal;
+				font-weight:normal;
+			}
+			@font-face {
+			    font-family: 'Helvetice-Light';
+			    src: url('../fonts/HelveticaNeueLight.ttf') format('truetype');
+				font-style:normal;
+				font-weight:normal;
+			}
+
+			body{
+				background-color: #e5e5ff;
+				margin: 0;
+				padding: 0;
+				font-family: "calibriRegular";
+				overflow-x: hidden;
+			}
+			button{
+				background-color: #cc0000;
+				border-radius: 4px;
+				font-size: 20px;
+				color: #fff;
+			}
+			button:hover, button:focus, button:active, button:visited{
+				background-color: #ff4d4d;
+			}
+			/*header*/
+			/*.bingo-header{
+				background-color: #222;
+				padding:15px 20px;
+				height: 50px;
+			}
+			.bingo-header *{
+				display: inline-block;
+				color:#fff;
+				margin:3px;
+			}
+			.bingo-header h1{
+				cursor: pointer;
+				overflow: hidden;
+			    float: left;
+			}
+			.bingo-header h1>img{
+				margin: 0px 10px;
+				float: left;
+			}
+			.bingo-header nav{
+				float: right;
+			}
+			.bingo-header nav>form>button{
+				font-size: 20px; 
+				margin:3px;
+				border:none;
+				border-radius: 3px;
+				outline: none;
+				padding: 4px 8px; 
+				cursor: pointer;
+			}
+			.bingo-header nav ul li a{
+			 	list-style-type: none;
+			 	display: inline;
+			 	cursor: pointer;
+			 	margin: 5px 17px;
+			    font-size: 22px;
+			    font-family: "calibriRegular";
+			    text-decoration: none;
+			 }
+			 .bingo-header nav ul li a:hover{
+			 	color:#d5d5c3;
+			 }*/
+			/*Footer*/
+/*			footer{
+				background-color: #222;
+				color: #fff;
+				padding: 15px 0;
+				text-align: center;
+				position: absolute;
+				width: 100%;
+				font-family: "Helvetice-Light";
+				margin-top:40px;
+			}
+*/
+			/*Login Form*/
+			.wrapper{
+				background-color: #e7e7e7;
+				margin: auto;
+				float: none;
+				border:1px solid #999;
+				border-radius: 5px;
+				margin: 100px auto;
+			}
+			.login-section.wrapper{
+				width:400px;
+			}
+			.login-section form{
+				overflow: hidden;
+			}
+			.registration-section.wrapper{
+				width:500px;
+			}
+			.wrapper header h1{
+				text-align: center;
+				font-size: 28px;
+			}
+			.wrapper section ul{
+				padding:0 15px;
+				list-style-type: none;
+			}
+			.wrapper section ul li{
+				color: #222;
+			    font-size: 20px;
+			    margin: 15px;
+			}
+			.wrapper section ul .forgot-password{
+				float: right;
+			    margin: 0px 14px 15px 0px;
+			}
+			.wrapper section ul .forgot-password a{
+			  color:#3399FF;
+			  text-decoration: none;
+			}
+			.wrapper section ul .forgot-password a:hover{
+				color:#3366FF;
+			}
+
+			.wrapper section ul li label{
+				line-height: 40px;
+				font-family: "Helvetice-Light";
+			}
+			.wrapper section ul li *{
+				border: medium none;
+			    font-size: 16px;
+			    font-weight: normal;
+			    padding: 8px 0 8px 5px;
+			    width: 100%;
+			}
+			.wrapper .login-btn{
+				border:none;
+				margin:15px 0 0 0;
+				cursor: pointer;
+				font-size: 20px;
+			}
+			.wrapper .reg-btn{
+				margin: 15px 3px;
+				color: #fff;
+				cursor: pointer;
+				font-size: 20px;
+			}
+		</style>
 	</head>
 	<body>
-		<header class="bingo-header">
+		<!-- <header class="bingo-header">
 			<h1><img src="images/dice.png">Bingo</h1>
 			<nav>
 				<form action="signup_form.html">
 					<button type="submit">Sign Up</button>
 				</form>
 			</nav>
-		</header>
+		</header> -->
 
 		<article class="login-section wrapper">
 			<header>
@@ -32,9 +186,9 @@
 			</section>
 		</article>
 
-		<footer>
+		<!-- <footer>
 			<span class="copyright">Copyright Layout</span>
-		</footer>
+		</footer> -->
 
 	</body>
 </html> 
