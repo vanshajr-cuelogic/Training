@@ -235,6 +235,15 @@ The em size unit is recommended by the W3C.
 The size can be calculated from pixels to em using this formula: pixels/16em
 
 
+HTML Graphic Element : 
+- Canvas 
+- SVG   --   Scalable Vector Graphics
+    i.   SVG stands for Scalable Vector Graphics
+	ii.  SVG is used to define graphics for the Web
+	iii. SVG is a W3C recommendation
+
+
+
 -Canvas :
 What is HTML Canvas?
 - The HTML <canvas> element is used to draw graphics, on the fly, via scripting (usually JavaScript).
