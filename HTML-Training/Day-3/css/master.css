@@ -42,8 +42,11 @@ button:hover, button:focus, button:active, button:visited{
 }
 .bingo-header h1{
 	cursor: pointer;
-	overflow: hidden;
+    overflow: hidden;
     float: left;
+    background: url('../images/dice.png') left top no-repeat;
+    padding: 0 40px;
+    margin: 5px;
 }
 .bingo-header h1>img{
 	margin: 0px 10px;
@@ -196,19 +199,21 @@ footer{
 .blog-wrapper .thumbnail-panel ul{
 	display: inline-block;
 }
-.blog-wrapper ul li{
-	display: block;
-	margin: 40px;
-}
 .game-list{
-	margin:0 35px;
+	margin:0;
+}
+.blog-wrapper ul li{
+	margin:0 20px;
 }
 .game-list ul li{
 	border:none;
-	margin: 15px 0;
-    height: auto;
-    width: 262px;
+	padding: 0;
+	margin: 0;
+	height: auto;
+	display: block;
+	width: 278px;
 }
+
 .game-list ul li a{
 	text-decoration: none;
 	color:#222;
@@ -218,6 +223,45 @@ footer{
 .game-list ul li a:hover{
 	color:#555;
 }
+.game-thumbnail aside{
+	width:200px;
+	border:1px solid #e7e7e7;
+	float: left;
+	min-height: 690px;
+}
+.game-thumbnail aside ul li{
+	padding: 0;
+    margin:15px;
+    font-size:18px;
+    height: auto;
+    width: auto;
+    border: none;
+}
+.game-thumbnail aside ul li a{
+	color:#222;
+	text-decoration: none;
+}
+.game-thumbnail aside ul li a:hover{
+	color:#555;
+}
+.site-blog-section{
+	display: none;
+}
+.site-blog-section iframe{
+	width: 1000px;
+    height: 400px;
+    padding: 5px;
+    margin: 15px;
+    border: 2px solid #555;
+    float: right;
+    opacity: 0.8;
+}
+.site-blog-section iframe:hover{
+	opacity:1;
+}
+
+
+
 
 /*Score Board*/
 .score-board table{
@@ -300,3 +344,4 @@ table td:first-child{
 	width: 135px;
     text-align: center;
 }
+
