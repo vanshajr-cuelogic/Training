@@ -178,9 +178,10 @@ footer{
 .thumbnail-panel li img{
 	height: 200px;
 	width:100%;
+	opacity: 0.8;
 }
 .thumbnail-panel li img:hover{
-	opacity:0.9;
+	opacity: 1;
 }
 .homepage-wrapper p{
 	font-family: "Helvetice-Light";
@@ -203,7 +204,6 @@ footer{
 }
 .blog-wrapper ul li{
 	margin:0 20px;
-	position: relative;
 }
 .game-list ul li{
 	border:none;
@@ -213,6 +213,7 @@ footer{
 	display: block;
 	width: 278px;
 }
+
 .game-list ul li a{
 	text-decoration: none;
 	color:#222;
@@ -221,21 +222,6 @@ footer{
 }
 .game-list ul li a:hover{
 	color:#555;
-}
-.thumbnail-panel li .search-img{
-	height:100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left:0;
-    opacity: 1;
-    background:#000 url('../images/search.png') no-repeat;
-    background-position: 50%;
-    opacity: 0
-}
-.thumbnail-panel li .search-img:hover{
-	opacity: 0.8;
-	cursor: pointer;
 }
 .game-thumbnail aside{
 	width:200px;
