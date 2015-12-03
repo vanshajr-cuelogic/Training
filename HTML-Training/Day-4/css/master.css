@@ -178,10 +178,9 @@ footer{
 .thumbnail-panel li img{
 	height: 200px;
 	width:100%;
-	opacity: 0.8;
 }
 .thumbnail-panel li img:hover{
-	opacity: 1;
+	opacity:0.9;
 }
 .homepage-wrapper p{
 	font-family: "Helvetice-Light";
@@ -204,6 +203,7 @@ footer{
 }
 .blog-wrapper ul li{
 	margin:0 20px;
+	position: relative;
 }
 .game-list ul li{
 	border:none;
@@ -213,7 +213,6 @@ footer{
 	display: block;
 	width: 278px;
 }
-
 .game-list ul li a{
 	text-decoration: none;
 	color:#222;
@@ -222,6 +221,21 @@ footer{
 }
 .game-list ul li a:hover{
 	color:#555;
+}
+.thumbnail-panel li .search-img{
+	height:100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    opacity: 1;
+    background:#000 url('../images/search.png') no-repeat;
+    background-position: 50%;
+    opacity: 0
+}
+.thumbnail-panel li .search-img:hover{
+	opacity: 0.7;
+	cursor: pointer;
 }
 .game-thumbnail aside{
 	width:200px;
@@ -242,7 +256,7 @@ footer{
 	text-decoration: none;
 }
 .game-thumbnail aside ul li a:hover{
-	color:#555;
+	color:#777;
 }
 .site-blog-section{
 	display: none;
@@ -259,6 +273,7 @@ footer{
 .site-blog-section iframe:hover{
 	opacity:1;
 }
+
 .video-blog-section iframe{
 	float: right;
 	border:none;
@@ -279,6 +294,33 @@ footer{
 .video-blog-section section{
 	float: right;
 	width: 100%;
+}
+
+/*Client Template */
+.client-template-banner{
+	padding: 15px;
+}
+.client-template-banner ul{
+	list-style-type: none;
+}
+.client-template-banner li{
+	display: inline-block;
+}
+.client-template-banner li img{
+	width: 410px;
+	height: 250px;
+	border:2px solid #999;
+	box-shadow:0px 1px 10px 3px #000;
+}
+.client-email-template{
+	width: 1000px;
+	height: 600px;
+	margin: auto;
+	float: none;
+}
+.email_template{
+	margin: 15px;
+	float: right;
 }
 
 
@@ -363,4 +405,3 @@ table td:first-child{
 	width: 135px;
     text-align: center;
 }
-
