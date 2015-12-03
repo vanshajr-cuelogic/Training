@@ -259,8 +259,27 @@ footer{
 .site-blog-section iframe:hover{
 	opacity:1;
 }
-
-
+.video-blog-section iframe{
+	float: right;
+	border:none;
+	padding: 15px 0;
+}
+.video-blog-section iframe video{
+    padding: 35px 40px;
+    margin: auto 0;
+    border: none;
+}
+.video-blog-section video{
+	float: right;
+	margin: 19px;
+	background: #000;
+	border:1px solid #999;
+	border-radius: 5px;
+}
+.video-blog-section section{
+	float: right;
+	width: 100%;
+}
 
 
 /*Score Board*/
