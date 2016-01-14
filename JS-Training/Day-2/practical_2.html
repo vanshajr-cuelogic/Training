@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+<!-- Referred Link : 
+http://www.phpied.com/3-ways-to-define-a-javascript-class/ 
+http://www.htmlgoodies.com/beyond/javascript/javascript-tutorial-functions-and-classes.html
+http://stackoverflow.com/questions/1635116/javascript-class-method-vs-class-prototype-method
+-->
+Write a program that will do the following:
+1. Create a student class and then create multiple student objects out of it.
+2. Using a student object, add a method in the student class that will be then accessible from new objects created.
+</p>
+
+<p>
+Please check the console for output ->.
+</p>
+
+<script>
+
+console.log("1. Create a student class and then create multiple student objects out of it.");
+function student(name,location,contact) {
+	this.person_name=name;
+	this.person_location=location;
+	this.person_contact=contact;
+}
+student1 = new student("John","pune",9579150346);
+student2 = new student("Jack","London",0421574135);
+student3 = new student("Jill","Paris",41545412121);
+
+console.log(student1.person_name);
+console.log(student1.person_contact);
+console.log(student1.person_location);
+console.log("/*******************************************************/");
+
+
+console.log("2. Using a student object, add a method in the student class that will be then accessible from new objects created.");
+function dummy_class(name,location,contact) {
+	this.person_name=name;
+	this.person_location=location;
+	this.person_contact=contact;
+}
+dum1 = new dummy_class("John","pune",9579150346);
+dum2 = new dummy_class("Jack","London",0421574135);
+dum3 = new dummy_class("Jill","Paris",41545412121);
+
+
+/*
+
+	A 'static method', it's just like a normal function 
+	it has no relation with any 'MyClass' object instance
+	
+	->  MyClass.staticMethod = function () {};
+
+
+
+	-> MyClass.prototype.publicMethod = function () {
+	   	the 'this' keyword refers to the object instance
+	   	you can access only 'privileged' and 'public' members
+	};
+
+*/
+
+
+
+student.staticMethod = function(){
+	alert("A 'static method', it's just like a normal function it has no relation with any 'MyClass' object instance")
+}
+
+/*
+	Correct way to defining the class's method.
+  	Method of student class.
+*/
+student.prototype.mymethod = function(){
+	console.log("'Called mymethod method', This method refers to the class 'student',only the instance of the student class can access this method.")
+}
+
+student.prototype.mymethod_param = function(){
+	console.log(this.person_name);
+	console.log(this.person_contact);
+	console.log(this.person_location);
+
+	//alert("This method refers to the class 'student',only the instance of the student class can access this method.")
+}
+
+/*Create new instance of the class 'student'.*/
+var obj_student = new student();
+
+/* Calling the class's method with newly created instance of the same class.*/
+obj_student.mymethod();
+
+/* Calling a new method using the previous instance of the same class.*/
+student2.mymethod_param();
+</script>
+
+
+</body>
+</html>

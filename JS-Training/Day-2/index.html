@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+1.Write a program to create functions that will do the following 
+    1. Add 2 numbers
+    2. Subtract 2 numbers
+    3. Divide 2 numbers
+    4. Multiply 2 numbers
+    Then update the program to get dynamic no of arguments(there can be 2,3,4 etc no of variables passed in when invoking the functions) The function should accept at least 2 variables and throw error if less then 2 are passed. The function should also validate the type of argument passed in
+</p>
+
+Operands : <p id="num1"><p> <p id="num2"></p>
+<p> Add 2 numbers :</p>
+<p id="added_values"></p>
+
+<p> Subtract 2 numbers :</p>
+<p id="subtract_values"></p>
+
+<p> Divide 2 numbers :</p>
+<p id="divide_values"></p>
+
+<p> Multiply 2 numbers :</p>
+<p id="multiply_values"></p>
+
+
+<!-- Dynamic Input -->
+<p>4. Multiple argument values :</p>
+Integer :<p id="integer_value"></p>
+String :<p id="string_value"></p>
+Addition of Integer values :<p id="multi_argument"></p>
+<p>/******************************************************************************************/</p>
+
+<script>
+
+ var num1 = 10;
+ var num2 = 20;
+
+document.getElementById("num1").innerHTML = num1;
+document.getElementById("num2").innerHTML = num2;
+
+ /*Addition*/
+ document.getElementById("added_values").innerHTML = num1 + num2;
+
+ /*Subtract*/
+ document.getElementById("subtract_values").innerHTML = num1 - num2;
+
+ /*Divide*/
+ document.getElementById("divide_values").innerHTML = num1 / num2;
+
+ /*Multiply*/
+ document.getElementById("multiply_values").innerHTML = num1 * num2;
+
+/*Multiple Values Operation*/
+ function operation(){
+ 	var sum=0;
+ 	var j=1;
+	 	if(arguments.length<2){
+	 		document.getElementById("multi_argument").innerHTML = "*Please pass the two operands for operation";
+	 	}
+	 	else{
+	 		var argument_array = new Array();
+	 		var integer_array = new Array();
+	 		var string_array = new Array();
+	 		for(var i=0;i<arguments.length;i++){
+		 			var int_char = (typeof arguments[i])
+		 			//alert(arguments[i])
+		 				if(int_char == "number"){
+							integer_array.push(arguments[i]);
+							document.getElementById("integer_value").innerHTML = integer_array;
+							sum += arguments[i];	
+							document.getElementById("multi_argument").innerHTML = sum;	
+		 				}
+		 				if(int_char == "string"){
+							string_array.push(arguments[i]);
+							document.getElementById("string_value").innerHTML = string_array
+		 				}
+		 				
+	 					
+	 				}
+	 				
+	 		}
+	 			
+	 	}
+ operation(10,12,"14",12,52);
+</script>
+
+</body>
+</html>
