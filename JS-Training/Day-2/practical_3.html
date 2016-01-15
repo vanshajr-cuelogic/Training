@@ -1,5 +1,3 @@
-<!--  Write a program that can make the use of 'reserved' keywords in JS without getting any error. -->
-
 <!DOCTYPE html>
 <html>
 <body>
@@ -9,7 +7,15 @@
 </p>
 
 <script>
-
+var obj = {
+  for: function(name,location,contact){			/* Method of reserved keyword 'FOR' */
+  		this.person_name=name;
+		this.person_location=location;
+		this.person_contact=contact;
+  }
+};
+student1 = new obj["for"]("John","pune",9579150346);    /* obj["for"] becuase we are calling the method of the obj */
+console.log(student1.person_name +","+ student1.person_location +","+student1.person_contact);
 </script>
 
 
