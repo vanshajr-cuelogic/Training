@@ -1,0 +1,43 @@
+<!-------------------------- INCOMPLETE --------------------  -->
+
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+ Write a function that will accept a single dimensional array whose value will be like ['00','01','11','10','11','00'] and break it into a 2 dimensional array like the following:
+    [
+        [0,0,1,1,1,0]
+        [0,1,1,0,1,0]
+    ]
+    the  length of array can be dynamic and contain as many values as possible
+</p>
+<p>Please check the console for output -></p>
+
+<script>
+var array_list = ['00','01','11','10','11','00'];
+var array_ele = new Array();
+var split_val_even = new Array();
+var split_val_odd = new Array();
+ 
+for (var i=0;i<array_list.length;i++){
+   array_ele.push(array_list[i].split(""));
+} 
+
+var string_array = array_ele.toString();
+var get_split_array = string_array.split(',')
+
+for(var i=0;i<get_split_array.length;i++){
+	if(i%2 == 0){
+		split_val_even.push(get_split_array[i]);
+	}
+	else{
+		split_val_odd.push(get_split_array[i]);	
+	}
+}
+console.log(split_val_even)
+console.log(split_val_odd)
+
+
+</script>
+</body>
+</html>

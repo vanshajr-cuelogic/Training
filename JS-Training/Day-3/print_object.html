@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+ Update program - 2 of Practicals Day 2 to add a method that will print name (called printName()) of each student object in its prototype.
+</p>
+
+<p>
+Please check the console for output ->.
+</p>
+
+<script>
+
+function student(name,location,contact) {
+	this.person_name=name;
+	this.person_location=location;
+	this.person_contact=contact;
+}
+
+student.prototype.printName = function(){
+	console.log(this.person_name)
+}
+
+student1 = new student("John","pune",9579150346);
+student2 = new student("Jack","London",0421574135);
+student3 = new student("Jill","Paris",41545412121);
+
+student1.printName();
+student2.printName();
+
+
+</script>
+
+
+</body>
+</html>

@@ -23,7 +23,11 @@ function student(name,location,contact) {
 	this.person_name=name;
 	this.person_location=location;
 	this.person_contact=contact;
+	this.ele = function(){
+		alert("student");
+	}
 }
+
 student1 = new student("John","pune",9579150346);
 student2 = new student("Jack","London",0421574135);
 student3 = new student("Jill","Paris",41545412121);
@@ -32,6 +36,22 @@ console.log(student1.person_name);
 console.log(student1.person_contact);
 console.log(student1.person_location);
 console.log("/*******************************************************/");
+
+
+// function teacher(num1,num2,num3) {
+// 	this.roll_1=num1;
+// 	this.roll_2=num2;
+// 	this.roll_3=num3;
+// 	this.name = "vanshaj"
+// 	this.ele = function(){
+// 		alert("teacher");
+// 	}
+// }
+// student_one = new teacher(10000,1524124,9579150346);
+
+// console.log("Pract : "+ student_one.name);
+
+// student_one.ele();
 
 
 console.log("2. Using a student object, add a method in the student class that will be then accessible from new objects created.");
