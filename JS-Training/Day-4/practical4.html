@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>Extend number type to have a 'int()' function that will convert any given 'float' value to its integer equivalent. (a no such as 5.00 should become 5). The function should only return that value and should not affect the actual number's value.
+</p>
+<p> Please check the output in Console</p>
+
+<script>
+var num = 5;
+function integer_conversion(){
+	var intValue = num.toFixed(2);
+	return intValue;
+}
+var integer_value = integer_conversion();
+console.log("Original Number : "+num);
+console.log("Converted Integer to Float:"+integer_value)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<style>
+	#zink li{
+		margin: 10px 0;
+		cursor: pointer;
+		padding: 10px 0;
+	}
+
+	</style>
+</head>
+<body>
+<p> Write a program to loop through the children of a ul element(ul will have 5 li's). Loop through each of the li and attach a function on it that will alert the value of that li (html text inside the li). 
+</p>
+<p>Please check the output in Console</p>
+
+<div class="functional_li">
+	<ul id="zink"></ul>
+</div>
+<script>
+for(var i=0;i<=5;i++){
+	var ele = document.createElement('li');
+	
+	ele.setAttribute("id", "click_"+i);
+	var li_elements = document.createTextNode("This is a paragraph"); 
+	ele.appendChild(li_elements);
+	zink.appendChild(ele);
+	document.getElementById("zink").appendChild(ele);  
+	document.getElementById("click_"+i).onclick=callme;
+}
+
+function callme()
+{
+    alert("Clicked..!!");
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!-- http://heyjavascript.com/4-creative-ways-to-clone-objects/ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p> Write a program to copy two objects. It should accept two arguments - source ( the object from which we need to copy) and target ( to which we need to copy). The target object will initially be empty.
+</p>
+<p>Please check the output in Console</p>
+
+<script>
+/*Using JSON Stringify*/
+var object1 = {first_name:"Vanshaj",id:"Cue197"}
+var object2 = (JSON.parse(JSON.stringify(object1)));
+console.log(object2.first_name);
+
+//JQuery Function
+//var object2 = $.extend(true, {}, object1);
+
+
+// function cloneObject(obj) {
+//     if (obj === null || typeof obj !== 'object') {
+//         return obj;
+//     }
+
+//     var temp = obj.constructor(); // give temp the original obj's constructor
+
+//     for (var key in obj) {
+//         temp[key] = cloneObject(obj[key]);
+//     }
+//     return temp;
+// }
+ 
+// var bob = {
+//     name: "Bob",
+//     age: 32
+// };
+ 
+// var bill = (cloneObject(bob));
+
+// //alert(bill.name)
+
+
+// bill.name = "Bill";
+ 
+// console.log(bob);
+// console.log(bill);
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

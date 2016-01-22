@@ -1,0 +1,39 @@
+<!-- http://heyjavascript.com/4-creative-ways-to-clone-objects/ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p> Write a program to merge two objects. It should accept two arguments - objectA and objectB. The result object will have the combined values and should not change the structure of either objectA or objectB. If both objects have same properties, consider using objectA property instead.
+</p>
+<p>Please check the output in Console</p>
+
+<script>
+
+var object1 = {first_name:"pan",id:"Cue197"}
+var object2 = {first_name:"vanshaj",id:"Cue19", roll:"FET",Gadget:"cell"}
+
+function merge_options(obj1,obj2){
+    var obj3 = {};
+    for (var i in obj2) 
+    	{ 
+    		obj3[i] = obj2[i]; 
+    	}
+    for (var i=0 in obj1) {
+     		obj3[i] = obj1[i];
+     	}
+    return obj3;
+}
+var cal = merge_options(object1,object2)
+console.log("Object1")
+console.log(object1)
+console.log("Object2")
+console.log(object2)
+console.log("Object3")
+console.log(cal)
+
+</script>
+
+</body>
+</html>
