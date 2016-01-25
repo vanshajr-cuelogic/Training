@@ -10,11 +10,26 @@
 <p>Please check the output in Console</p>
 
 <script>
-/*Using JSON Stringify*/
-var object1 = {first_name:"Vanshaj",id:"Cue197"}
-var object2 = (JSON.parse(JSON.stringify(object1)));
-console.log(object2.first_name);
 
+
+
+/*Using JSON Stringify*/
+console.log("When you copy the object using JSON methods it will impact only to the target object that will impact only to the target object not to the source object.");
+var object1 = {first_name:"Vanshaj",id:"Cue197"}
+var object2 = JSON.parse(JSON.stringify(object1));
+console.log(object2);
+object2.first_name = "Ravi";
+console.log(object1);
+console.log(object2);
+
+console.log("/%%%%%%%%%%%%%%%%%%%%%%%%/");
+
+console.log("When you copy the object direct (using =) to the target object that will impact to the target object as well as source object.");
+var object1 = {first_name:"Vanshaj",id:"Cue197"}
+var object2 = object1;
+object2.first_name = "Sagar";
+console.log(object1);
+console.log(object2);
 //JQuery Function
 //var object2 = $.extend(true, {}, object1);
 
